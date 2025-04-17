@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Projects - WildLife.AI</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-icons/dist/umd/lucide.min.css">
+</head>
+<body>
+    <div class="site-wrapper">
+        <!-- Background image -->
+        <div class="background">
+            <img src="/lovable-uploads/af7b99f0-9782-4288-8fe7-f5d39db24d8e.png" alt="Cybernetic tiger in field of red flowers">
+            <div class="overlay"></div>
+        </div>
+
+        <!-- Navigation -->
+        <nav>
+            <div class="nav-container">
+                <a href="index.html" class="logo">WildLife.AI</a>
+                <div class="menu-button" onclick="toggleMenu()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+                </div>
+            </div>
+            <div class="menu" id="menu">
+                <a href="index.html" class="menu-item">HOME</a>
+                <a href="projects.html" class="menu-item">PROJECT</a>
+                <a href="donate.html" class="menu-item">DONATE</a>
+                <a href="login.html" class="menu-item">LOGIN</a>
+                <a href="about.html" class="menu-item">ABOUT</a>
+            </div>
+        </nav>
+
+        <!-- Projects Content -->
+        <main class="projects-main">
+            <h1>Our Projects</h1>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <img src="/lovable-uploads/67be8727-f8db-44bc-9bad-d1fe5eb025af.png" alt="Tiger Tracking Initiative">
+                    <div class="project-content">
+                        <h3>Tiger Tracking Initiative</h3>
+                        <p>Using thermal imaging and AI pattern recognition to monitor tiger populations in Southeast Asia.</p>
+                        <a href="#" class="project-button">
+                            Learn More 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <img src="/lovable-uploads/8ac75315-6109-4739-b58f-29275d5699e5.png" alt="Elephant Migration Mapping">
+                    <div class="project-content">
+                        <h3>Elephant Migration Mapping</h3>
+                        <p>Drone-based monitoring of elephant herds to prevent human-wildlife conflict and poaching.</p>
+                        <a href="#" class="project-button">
+                            Learn More 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <img src="/lovable-uploads/b2527bea-617d-4e67-a0c4-4a679d147654.png" alt="Rhino Protection Program">
+                    <div class="project-content">
+                        <h3>Rhino Protection Program</h3>
+                        <p>AI-powered facial recognition for individual rhino identification and poacher prediction algorithms.</p>
+                        <a href="#" class="project-button">
+                            Learn More 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <img src="/lovable-uploads/22a8060d-a6ad-4deb-9d07-e6d8a17397ee.png" alt="Wildlife Corridor Analysis">
+                    <div class="project-content">
+                        <h3>Wildlife Corridor Analysis</h3>
+                        <p>Using satellite imagery and AI to identify and protect critical wildlife corridors between habitats.</p>
+                        <a href="#" class="project-button">
+                            Learn More 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('menu-active');
+        }
+    </script>
+</body>
+</html>

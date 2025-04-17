@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WildLife.AI - Using AI to accelerate Wildlife conservation</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-icons/dist/umd/lucide.min.css">
+</head>
+<body>
+    <div class="site-wrapper">
+        <!-- Background image -->
+        <div class="background">
+            <img src="/lovable-uploads/af7b99f0-9782-4288-8fe7-f5d39db24d8e.png" alt="Cybernetic tiger in field of red flowers">
+            <div class="overlay"></div>
+        </div>
+
+        <!-- Navigation -->
+        <nav>
+            <div class="nav-container">
+                <a href="index.html" class="logo">WildLife.AI</a>
+                <div class="menu-button" onclick="toggleMenu()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+                </div>
+            </div>
+            <div class="menu" id="menu">
+                <a href="index.html" class="menu-item">HOME</a>
+                <a href="projects.html" class="menu-item">PROJECT</a>
+                <a href="donate.html" class="menu-item">DONATE</a>
+                <a href="login.html" class="menu-item">LOGIN</a>
+                <a href="about.html" class="menu-item">ABOUT</a>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main>
+            <h1>Using AI to accelerate<br class="desktop-only">Wildlife conservation</h1>
+
+            <div class="cards-container">
+                <!-- Elephant Card -->
+                <div class="card">
+                    <img src="/lovable-uploads/8ac75315-6109-4739-b58f-29275d5699e5.png" alt="Elephant">
+                    <p>Our AI system uses drone footage and camera trap data to track elephant herds across protected reserves. This helps prevent poaching and manage migration patterns.</p>
+                </div>
+
+                <!-- Tiger Card -->
+                <div class="card">
+                    <img src="/lovable-uploads/67be8727-f8db-44bc-9bad-d1fe5eb025af.png" alt="Tiger">
+                    <p>Real-time tracking of tiger movements via thermal cameras and pattern recognition. Alerts park rangers to any suspicious activity near tiger habitats.</p>
+                </div>
+
+                <!-- Rhino Card -->
+                <div class="card">
+                    <img src="/lovable-uploads/b2527bea-617d-4e67-a0c4-4a679d147654.png" alt="Rhino">
+                    <p>Poacher prediction algorithms analyze past incidents and predict future threats. Facial recognition used for individual rhino ID.</p>
+                </div>
+            </div>
+
+            <a href="projects.html" class="cta-button">
+                Explore More
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+        </main>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('menu-active');
+        }
+    </script>
+</body>
+</html>

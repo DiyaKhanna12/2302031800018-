@@ -1,0 +1,52 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found - WildLife.AI</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-icons/dist/umd/lucide.min.css">
+</head>
+<body>
+    <div class="site-wrapper">
+        <!-- Background image -->
+        <div class="background">
+            <img src="/lovable-uploads/af7b99f0-9782-4288-8fe7-f5d39db24d8e.png" alt="Cybernetic tiger in field of red flowers">
+            <div class="overlay"></div>
+        </div>
+
+        <!-- Navigation -->
+        <nav>
+            <div class="nav-container">
+                <a href="index.html" class="logo">WildLife.AI</a>
+                <div class="menu-button" onclick="toggleMenu()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+                </div>
+            </div>
+            <div class="menu" id="menu">
+                <a href="index.html" class="menu-item">HOME</a>
+                <a href="projects.html" class="menu-item">PROJECT</a>
+                <a href="donate.html" class="menu-item">DONATE</a>
+                <a href="login.html" class="menu-item">LOGIN</a>
+                <a href="about.html" class="menu-item">ABOUT</a>
+            </div>
+        </nav>
+
+        <!-- 404 Content -->
+        <main class="error-main">
+            <div class="error-container">
+                <h1>404</h1>
+                <p>Oops! The page you're looking for doesn't exist.</p>
+                <a href="index.html" class="error-button">Return to Home</a>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('menu-active');
+        }
+    </script>
+</body>
+</html>

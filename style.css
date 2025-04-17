@@ -1,0 +1,589 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    color: white;
+    background-color: #000;
+}
+
+.site-wrapper {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Typography */
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+    letter-spacing: 0.1em;
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 3.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 4rem;
+    }
+}
+
+/* Navigation */
+nav {
+    position: relative;
+    z-index: 50;
+}
+
+.nav-container {
+    background-color: rgba(100, 50, 150, 0.8);
+    backdrop-filter: blur(8px);
+    border-radius: 0 0 1.5rem 1.5rem;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 1.875rem;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+}
+
+@media (min-width: 768px) {
+    .logo {
+        font-size: 2.25rem;
+    }
+}
+
+.menu-button {
+    color: white;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.menu {
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 0 0 1.5rem 1.5rem;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+}
+
+.menu-active {
+    display: flex;
+    animation: accordion-down 0.3s ease-out;
+}
+
+.menu-item {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    padding: 0.75rem;
+    width: 100%;
+    text-align: center;
+    border-radius: 0.75rem;
+    transition: background-color 0.3s;
+}
+
+.menu-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+@media (min-width: 768px) {
+    .menu-item {
+        font-size: 1.875rem;
+    }
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    padding-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+    padding: 6rem 1rem 2rem 1rem;
+}
+
+/* Home Page */
+.cards-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    width: 100%;
+    margin: 4rem auto;
+}
+
+@media (min-width: 768px) {
+    .cards-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    border-radius: 0.75rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card img {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    color: white;
+    text-align: center;
+    font-size: 0.875rem;
+}
+
+@media (min-width: 768px) {
+    .card p {
+        font-size: 1rem;
+    }
+}
+
+.cta-button {
+    margin-top: 3rem;
+    background-color: #e53e3e;
+    color: white;
+    padding: 1.5rem 2.5rem;
+    border-radius: 0.75rem;
+    font-size: 1.25rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #c53030;
+}
+
+.desktop-only {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .desktop-only {
+        display: block;
+    }
+}
+
+/* Projects Page */
+.projects-main {
+    padding-top: 6rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto 4rem auto;
+}
+
+@media (min-width: 768px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.project-card {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    border-radius: 1.5rem;
+    overflow: hidden;
+}
+
+.project-card img {
+    width: 100%;
+    height: 16rem;
+    object-fit: cover;
+}
+
+.project-content {
+    padding: 1.5rem;
+}
+
+.project-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.project-content p {
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
+}
+
+.project-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: rgba(100, 50, 150, 0.8);
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s;
+}
+
+.project-button:hover {
+    background-color: rgba(100, 50, 150, 1);
+}
+
+/* About Page */
+.about-main {
+    padding-top: 6rem;
+}
+
+.about-container {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    max-width: 1200px;
+    width: 100%;
+    margin: 4rem auto;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .about-content {
+        flex-direction: row;
+    }
+}
+
+.about-image {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .about-image {
+        width: 33%;
+    }
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+}
+
+/* Donate Page */
+.donate-main {
+    padding-top: 6rem;
+}
+
+.donate-container {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    max-width: 600px;
+    width: 100%;
+    margin: 4rem auto;
+}
+
+.donate-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.donate-form h2 {
+    font-size: 2rem;
+    color: #e53e3e;
+    text-align: center;
+    margin-bottom: 1rem;
+    letter-spacing: 0.05em;
+}
+
+.frequency-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+@media (min-width: 640px) {
+    .frequency-buttons {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.frequency-button {
+    background-color: rgba(100, 50, 150, 0.5);
+    color: white;
+    border: none;
+    border-radius: 0.75rem;
+    padding: 1.5rem 2rem;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.frequency-button:hover,
+.frequency-button.active {
+    background-color: rgba(100, 50, 150, 0.8);
+}
+
+.donate-input,
+.donate-textarea {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    color: white;
+    font-size: 1.25rem;
+}
+
+.donate-textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.donate-input::placeholder,
+.donate-textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.donate-submit {
+    background-color: #e53e3e;
+    color: white;
+    border: none;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    font-size: 1.25rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+}
+
+.donate-submit:hover {
+    background-color: #c53030;
+}
+
+/* Login Page */
+.login-main {
+    padding-top: 6rem;
+}
+
+.login-container {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    max-width: 400px;
+    width: 100%;
+    margin: 4rem auto;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.login-input {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid #e53e3e;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    color: white;
+    font-size: 1.25rem;
+    height: 3.5rem;
+}
+
+.login-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.login-button {
+    background-color: #e53e3e;
+    color: white;
+    border: none;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    font-size: 1.25rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+}
+
+.login-button:hover {
+    background-color: #c53030;
+}
+
+.login-separator {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.login-separator p {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.login-with {
+    font-size: 1.25rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.social-button {
+    background-color: transparent;
+    border: 2px solid #e53e3e;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.social-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.social-button img {
+    width: 1.5rem;
+    height: 1.5rem;
+    filter: invert(1);
+}
+
+/* 404 Page */
+.error-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding-top: 0;
+}
+
+.error-container {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+}
+
+.error-container h1 {
+    font-size: 6rem;
+    color: #e53e3e;
+    margin-bottom: 1rem;
+}
+
+.error-container p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.error-button {
+    background-color: rgba(100, 50, 150, 0.8);
+    color: white;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 0.75rem;
+    font-size: 1.125rem;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.error-button:hover {
+    background-color: rgba(100, 50, 150, 1);
+}
+
+/* Animations */
+@keyframes accordion-down {
+    from {
+        height: 0;
+        opacity: 0;
+    }
+    to {
+        height: var(--radix-accordion-content-height);
+        opacity: 1;
+    }
+}
